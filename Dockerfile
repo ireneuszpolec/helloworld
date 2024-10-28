@@ -9,7 +9,8 @@ COPY . .
 
 #kilka bibliotek(instalacja)
 
-RUN docker-php-ext-install pdo pdo_pgsql pdo-pgsql
+RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo pdo_pgsql
+
 
 #instlaacja komposera
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
