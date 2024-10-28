@@ -3,7 +3,7 @@
 $mode = getenv("APP_MODE");
 $key = getenv("API_KEY");
 
-if($mod=="prod") 
+if($mode=="prod") 
 {
     echo "Wersja produkcyjna"; 
 }
