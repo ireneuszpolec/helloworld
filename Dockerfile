@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo
 
 
 #instlaacja komposera
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+#COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 #composer - narzenie do php do zarzania bibliotekami
 run composer install
